@@ -12,6 +12,68 @@
 }
 
 
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+
+
+/* Age v*/
+
+#ageWrapper {
+
+    opacity: 1;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 99899;
+    background-color: rgba(0, 0, 0, .95);
+    transition: visibility 0s ease-in-out .5s, opacity .5s ease-in-out;
+}
+
+#ageWrapper.ageUnknown {
+    visibility: visible;
+    opacity: 1;
+}
+
+#agePopUp {
+    position: absolute;
+    width: 100%;
+    max-width: 500px;
+    padding: 25px;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 999999;
+    text-align: center;
+    font-family: brandon-grotesque, sans-serif;
+    background-color: #fff;
+    opacity: 1;
+    -webkit-transition: all .6s ease;
+    -o-transition: all .6s ease;
+    transition: all .6s ease;
+}
+
+#agePopUp a {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.ageConfirmed {
+    z-index: -1;
+    visibility: hidden;
+}
+
+
 
 .spinner-wrapper {
     position: fixed;
@@ -24,7 +86,38 @@
 }
 
 
+.btn-no {
+    background-color: #fff !important;
+    font-size: 16px !important;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    color: #061E48 !important;
+    border-bottom-color: #061E48 !important;
+    border-bottom: 5px solid !important;
+    text-align: center;
+    text-decoration: none !important;
+}
 
+.btn-yes {
+    background-color: #061E48 !important;
+    font-size: 16px !important;
+    text-transform: capitalize;
+    letter-spacing: 2px !important;
+    text-align: center;
+    width: 30%;
+    border-radius: 0 !;
+    -webkit-box-shadow: 0px 35px 43px 2px rgba(0, 0, 0, 0.03);
+    -moz-box-shadow: 0px 35px 43px 2px rgba(0, 0, 0, 0.03);
+    box-shadow: 0px 35px 43px 2px rgba(0, 0, 0, 0.03);
+
+
+}
+
+.popup {
+    font-size: 68px;
+}
+
+/* Preloader */
 
 .spinner {
     margin: 100px auto 0;
@@ -123,7 +216,7 @@
 /* Navbar end */
 
 .leftHalf {
-    background-image: url(img/banner-img-desktop.jpg);
+    background-image: url(../Website/img/banner-img-desktop.jpg);
     width: 50%;
     position: absolute;
     left: 0px;
@@ -141,6 +234,9 @@
     right: 0px;
     height: 100%;
     z-index: 100;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url(../Website/img/white-texture.jpg);
 }
 
 
@@ -173,8 +269,10 @@ h2 {
     margin: auto;
     text-align: center;
     position: relative;
-    top: 20%;
-    font-family: pure;
+    top: 25%;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: bolder;
+
 }
 
 
@@ -258,6 +356,208 @@ p {
 }
 
 
+
+
+
+/* Cocktails */
+
+.details-card {
+    background: white !important;
+    ;
+}
+
+.card-content {
+    background: #fff;
+    border: 4px;
+
+}
+
+.card-img {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0;
+    z-index: 1;
+}
+
+.card-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+.card-img:hover {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0;
+    z-index: 1;
+    opacity: 0.5;
+    transition: 1s;
+}
+
+
+
+
+.card-desc {
+    padding-top: 2rem;
+}
+
+.card-desc h3 {
+    color: #000;
+    font-weight: 600;
+    font-size: 1.5em;
+    line-height: 1.3em;
+    margin-top: 0;
+    margin-bottom: 5px;
+    padding: 0;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.card-desc p {
+    color: #747373;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.7;
+    margin: 0px;
+    margin-bottom: 20px;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+.btn-card {
+    color: grey !important;
+    font-size: 1rem;
+    margin: 0;
+    border: 0;
+    -webkit-border-radius: .125rem;
+    border-radius: .125rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    white-space: normal;
+    word-wrap: break-word;
+    color: #fff;
+}
+
+.btn-card:hover {
+    letter-spacing: 2px;
+    transition: .2s;
+}
+
+a.btn-card {
+    text-decoration: none;
+    color: #fff;
+}
+
+
+.cocktails {
+    text-decoration: none !important;
+}
+
+
+
+
+/* VIDEO SCREN */
+.video-section {
+    position: relative;
+    background-color: black;
+    height: 75vh;
+    min-height: 40rem;
+    width: 100%;
+    overflow: hidden;
+    top: 88px;
+}
+
+.video-section video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.video-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.video-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.8;
+    z-index: 1;
+}
+
+.video-section h1 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: bolder;
+    font-size: 100px;
+    letter-spacing: 3px;
+
+}
+
+
+
+.card-body h2 {
+    font-size: 41px;
+    text-align: left;
+    color: #111111;
+    text-shadow: none;
+    font-weight: bolder !important;
+    font-family: 'Josefin Sans', sans-serif;
+    letter-spacing: 3px;
+}
+
+section .card {
+
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+
+    background-clip: border-box;
+    border-color: none !important;
+    border-radius: none !important;
+
+}
+
+.mt-7 {
+    margin-top: 100px;
+}
+
+
+.pt-100 {
+    padding-top: 200px;
+    padding-bottom: 120px;
+}
+
+.p-7 {
+    padding: 7rem !important;
+}
+
+.bg-texture {
+
+    color: #fff;
+    background-color: #FEF748;
+    min-height: 400px;
+
+}
 
 @media only screen and (max-width: 414px) {
 
@@ -384,6 +684,18 @@ p {
         border-bottom: 5px solid;
     }
 
+}
+
+
+
+@media (pointer: coarse) and (hover: none) {
+    .video-section {
+        background: url('http://sandbox.thewikies.com/vfe-generator/images/big-buck-bunny_poster.jpg') black no-repeat center center scroll;
+    }
+
+    .video-section video {
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 975px) {
